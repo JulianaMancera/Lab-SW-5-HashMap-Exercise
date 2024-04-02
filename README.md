@@ -11,7 +11,7 @@
 
 ### Access the following files:
 
-**Book.csv**
+**Book.csv** <br>
 Isbn, title, author name <br>
 BK-1234,The Lord of the Rings,J.R.R. Tolkien <br>
 BK-5678,The Hobbit,J.R.R. Tolkien <br>
@@ -21,7 +21,7 @@ BK-7890,To Kill a Mockingbird,Harper Lee <br>
 BK-3456,One Hundred Years of Solitude,Gabriel Garcia Marquez <br>
 BK-0987,Love in the Time of Cholera,Gabriel Garcia Marquez <br>
 
-**Author.csv**
+**Author.csv** <br>
 name,bio <br>
 J.R.R. Tolkien,English philologist and university professor <br>
 Jane Austen,English novelist known for her wit <br>
@@ -39,8 +39,8 @@ _Use the following sequence diagram in the implementation of the codes:_
 **Sample output:**
 
 BK-1234 The Lord of the Rings <br>
-&nbsp; J.R.R. Tolkien - English philologist and university professor <br>
+ &ensp; J.R.R. Tolkien - English philologist and university professor <br>
 
 BK-9012 Pride and Prejudice <br>
-&nbsp; Jane Austen - English novelist known for her wit
+ &ensp; Jane Austen - English novelist known for her wit
 
