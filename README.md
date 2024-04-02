@@ -10,7 +10,7 @@
 **Use HASHMAP.** Use isbn as your key. Use FileReader in accessing the files. <br>
 
 ### Access the following files:
-<br>
+
 **Book.csv** <br>
 _Isbn, title, author name_ <br>
 BK-1234,The Lord of the Rings,J.R.R. Tolkien <br>
@@ -19,7 +19,7 @@ BK-9012,Pride and Prejudice,Jane Austen <br>
 BK-2345,Sense and Sensibility,Jane Austen <br>
 BK-7890,To Kill a Mockingbird,Harper Lee <br>
 BK-3456,One Hundred Years of Solitude,Gabriel Garcia Marquez <br>
-BK-0987,Love in the Time of Cholera,Gabriel Garcia Marquez <br> 
+BK-0987,Love in the Time of Cholera,Gabriel Garcia Marquez <br> <br>
 
 **Author.csv** <br>
 _name,bio_ <br>
