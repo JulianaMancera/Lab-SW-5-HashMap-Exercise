@@ -1,28 +1,55 @@
-import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class BookDA {
 
-    public static HashMap<String, Book> bookMap loadBooks(String fileName){
-        HashMap<String, Book> books = new HashMap<>();
+    private HashMap<String, Book> bookMap;
 
-    try(BufferedReader br = new BufferedReader(new FileReader(fileName))){
+    public HashMap<String, Book> getBookMap() {
+        return bookMap;
+    }
 
-        String line;
+    public BookDA(){
+        bookMap = new HashMap<>();
+    }
 
-        while ((line = br.readLine()) != null) {{
+    public void loadData() {
 
-            String[] data = line.split(", ");
-            String 
+        try{
 
+            Scanner bookInput = new Scanner(new FileReader("Book.csv"));
+
+                while(bookInput.hasNextLine()){
+
+                String[] bookSplitData = bookInput.nextLine().split(",");
+
+                Book book = new Book();
+                book.setIsbn(bookSplitData[0].trim());
+                book.setTitle(bookSplitData[1].trim());
+                book.setAuthorName(bookSplitData[2].trim());
+
+                setAuthor(book);
+                bookMap.put(book.getIsbn(), book);
+
+            }
         }
 
+        catch(FileNotFoundException e){
+            throw new RuntimeException(e);
+        }
     }
-    
+
+    private void setAuthor(Book book){
+        AuthorDA authorDA = new AuthorDA();
+        authorDA.loadData();
+        HashMap<String, Author> authorMap = authorDA.getAuthorMap();
+
+        Author author = authorMap.get(book.getAuthorName());
+        if(author != null){
+            book.setAuthor(author);
+        }
     }
-}
 }
 
 

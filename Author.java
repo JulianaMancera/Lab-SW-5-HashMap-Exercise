@@ -3,8 +3,6 @@ public class Author {
     private String name;
     private String bio;
 
-
-
     public void setName(String name) {
         this.name = name;
     }
@@ -13,7 +11,7 @@ public class Author {
         this.bio = bio;
     }
 
-    public String getName(String string) {
+    public String getName() {
         return name;
     }
 
